@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.game-root {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay[aria-hidden="true"] {
+    display: none;
+}
+
+.overlay-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.game-area {
+    padding: 20px;
+}
+
+.blocks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    background: #ddd;
+    border: 2px solid #333;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none; /* Prevent default outline */
+}
+
+.block:hover,
+.block:focus {
+    outline: 3px solid #4CAF50; /* Green focus/hover outline */
+    background-color: #e8f5e9; /* Light green hover/focus background */
+}
+
+.block.selected {
+    background-color: #4CAF50; /* Solid green for good blocks */
+    pointer-events: none; /* Disable further interaction */
+}
+
+.block.bad {
+    background-color: #f44336; /* Red for bad blocks */
+    pointer-events: none;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#music-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Default is hidden */
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add some visual depth */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+#music-volume {
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.volume-label {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+}

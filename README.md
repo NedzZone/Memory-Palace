@@ -96,7 +96,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - A heartfelt thank you to the blind community for inspiring this project.
 - Background music by **Yuzo Koshiro** from [Retro.sx](https://retro.sx/music/159).
-- Accessibility feedback provided by community testers.
 
 ---
 
